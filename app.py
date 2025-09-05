@@ -73,7 +73,7 @@ def load_models():
     try:
         components = {
             'tfidf_vectorizer': joblib.load('tfidf_vectorizer.pkl'),
-            'ovr_lgbm': joblib.load('lgbm_model.pkl'),
+            'ovr_lgbm': joblib.load('lgbm_model.pkl.gz'),
             'ovr_logreg': joblib.load('logreg_model.pkl'),
             'transformer_model': SentenceTransformer('all-MiniLM-L6-v2', device='cpu'),
             'genres': [
@@ -282,3 +282,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
